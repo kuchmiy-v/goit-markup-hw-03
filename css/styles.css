@@ -22,7 +22,7 @@ body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 /* logo */
@@ -34,13 +34,10 @@ body {
   text-decoration: none;
 }
 
-.footer-logo {
-  color: var(--secondary-button-color);
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  line-height: 1.33;
-  text-decoration: none;
+.web-logo {
+  color: #4d5ae5;
 }
+
 
 .list {
   padding: 0;
@@ -51,7 +48,7 @@ body {
 /* site nav */
 .header-list {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -74,7 +71,7 @@ body {
 
 /* hero */
 .hero {
-        padding: 188px 473px;
+  padding: 188px 473px;
   background-color: var(--hero-background-color);
   text-align: center;
   margin-bottom: 120px;
@@ -85,29 +82,30 @@ body {
   margin-bottom: 50;
   color: var(--primary-white-color);
   width: 494px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
+    text-align: center;
 }
 
 /* section */
 .section {
-        margin-top: 0;
-        margin-bottom: 120px;
+  margin-top: 0;
+  margin-bottom: 120px;
   background-color: var(--cards-bg-color);
 }
 .section-title {
-        margin-top: 0;
-        margin-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
 }
 
 .section-after-title {
-        margin-top: 0;
-        margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
@@ -115,16 +113,23 @@ body {
 
 .works-title {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
 }
 
+.team {
+  background-color: var(--cards-bg-color);
+  padding: 120px 156px;
+}
+
 .team-title {
+  margin-top: 0;
+  margin-bottom: 72px;
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -133,7 +138,7 @@ body {
 
 .card-title {
   color: var(--title-text-color);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
@@ -146,6 +151,12 @@ body {
   text-align: center;
 }
 
+.card-category {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .portf-card-text {
   color: var(--cards-bg-color);
   font-size: 16px;
@@ -156,11 +167,6 @@ body {
   text-decoration: none;
 }
 
-.card-category {
-  color: var(--primary-text-color);
-  font-size: 16px;
-  line-height: 1.5;
-}
 
 /* button */
 
@@ -180,12 +186,14 @@ body {
 }
 
 .button.primary {
+  font-family: Roboto, sans-serif;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   border: 1px solid transparent;
 }
 
 .button.secondary {
+  font-family: Roboto, sans-serif;
   color: var(--accent-color);
   background-color: var(--secondary-button-color);
   border: 1px solid #e7e9fc;
@@ -194,4 +202,22 @@ body {
 footer {
   color: #e7e9fc;
   background-color: var(--hero-background-color);
+}
+
+.footer-logo {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--secondary-button-color);
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  text-decoration: none;
+}
+
+.footer-text {
+  position: absolute;
+width: 264px;
+height: 110px;
+left: 156px;
+top: 2380px;
 }
