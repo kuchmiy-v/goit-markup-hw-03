@@ -172,6 +172,19 @@ body {
 .section-after-title {
   margin-top: 0;
   margin-bottom: 0;
+  /* не виходить виставити маржени між картками section-after-title через флекси: 
+  .features .section {
+  display: flex; 
+  width: 1128px;
+  margin-left: 156px;
+  margin-right: 156px; 
+}
+.section .section-item: {
+  margin-right: 24px;
+}
+.section .section-item:last-child {
+  margin-right: 0;
+}  */
   margin-right: 24px;
   width: 264px;
   color: var(--primary-text-color);
@@ -179,10 +192,12 @@ body {
   line-height: 1.5;
 }
 
+/* works "We are doing" */
 .works {
   width: 1128px;
   padding-left: 156px;
   padding-right: 156px;
+  margin-bottom: 120px;
 }
 .works .list {
   display: flex;
@@ -204,10 +219,16 @@ body {
   margin-right: 0;
 }
 
-.section .team {
+/* Our team */
+.team-section .team {
   width: 1440;
+  /* height: 732px; */
   background-color: var(--cards-bg-color);
   padding: 120px 156px;
+  /* margin-top: 120px; */
+  /* padding-left: 156px;
+  padding-right: 156px;
+  padding-top: 120px; */
 }
 
 .team .team-cards {
