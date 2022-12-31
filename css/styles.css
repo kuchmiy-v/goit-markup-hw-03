@@ -18,12 +18,19 @@
 }
 
 body {
-  width: 1440px;
+  /* width: 1440px; */
   background-color: #e5e5e5;
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-size: 16px;
   letter-spacing: 0.02em;
+}
+
+/* всередині кожної секції має бути контейнер. 
+  Контейнер - це <div>? І чи потрібно самій секції задавати клас? */
+.header {
+  width: 1440px;
+  margin: 0 auto;
 }
 
 /* header navigation */
@@ -49,7 +56,7 @@ body {
 
 .list {
   padding: 0;
-  margin: 0;
+  /* margin: 0; */
   list-style: none;
 }
 
@@ -71,7 +78,6 @@ body {
 /* .header-list .header-item + .header-item {
   margin-left: 40px;
 }
-
 .header-list .header-item:last-child {
   margin-right: 0;
 }  */
@@ -110,21 +116,23 @@ body {
 
 /* hero */
 .hero {
-  width: 1440px;
+  margin: 0 auto;
+  /* width: 1440px; */
   height: 600px;
-  /* padding: 188px 473px; */
+  /* прибираємо маржени, оформлення робимо падінгами */
+  padding: 188px 473px;
   background-color: var(--hero-background-color);
   text-align: center;
-  margin-bottom: 120px;
+  /* margin-bottom: 120px; */
 }
 
 /* не виходить розмістити текст (основний напис Effective Solutions for Your Business) як на макеті, просто підігнав падінгами */
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 50;
-  /* padding: 188px 473px; */
+  margin: 0 auto;
+  margin-bottom: 48px;
+  /* padding: 188px 473px;
   padding-top: 188px;
-  padding-left: 473px;
+  padding-left: 473px; */
   color: var(--primary-white-color);
   width: 494px;
   font-weight: 700;
@@ -134,31 +142,38 @@ body {
 }
 
 .features {
-  width: 1128px;
-  padding-left: 156px;
-  padding-right: 156px;
+  width: 1440px;
+  margin: 0 auto;
+  /* padding-left: 156px;
+  padding-right: 156px; */
+  padding: 120px 156px;
 }
 
 /* section */
 .section {
-  margin-top: 0;
-  margin-bottom: 120px;
+  /* margin-top: 0;
+  margin-bottom: 120px; */
+  /* padding-bottom: 120px; */
   background-color: var(--cards-bg-color);
 }
 
 .features .section {
   display: flex;
-  /* width: 1128px;
-  margin-left: 156px;
+  /* width: 1128px; */
+  /* margin-left: 156px;
   margin-right: 156px; */
+  /* padding: 156px 0px; */
+  /* padding-left: 156px;
+  padding-right: 156px;
+  padding-top: 120px; */
 }
 
-/* .section .section-item: {
+.section .section-item: {
   margin-right: 24px;
 }
 .section .section-item:last-child {
   margin-right: 0;
-} */
+}
 
 .section-title {
   margin-top: 0;
@@ -170,8 +185,9 @@ body {
 }
 
 .section-after-title {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  /* margin-top: 0;
+  margin-bottom: 0; */
   /* не виходить виставити маржени між картками section-after-title через флекси: 
   .features .section {
   display: flex; 
@@ -194,10 +210,12 @@ body {
 
 /* works "We are doing" */
 .works {
-  width: 1128px;
+  width: 1440px;
+  margin: 0 auto;
   padding-left: 156px;
   padding-right: 156px;
-  margin-bottom: 120px;
+  /* margin-bottom: 120px; */
+  padding-bottom: 120px;
 }
 .works .list {
   display: flex;
@@ -220,8 +238,13 @@ body {
 }
 
 /* Our team */
-.team-section .team {
-  width: 1440;
+.team-section {
+  width: 1440px;
+  margin: 0 auto;
+}
+/* .team-section .team { */
+.team {
+  /* width: 1440; */
   /* height: 732px; */
   background-color: var(--cards-bg-color);
   padding: 120px 156px;
@@ -229,6 +252,17 @@ body {
   /* padding-left: 156px;
   padding-right: 156px;
   padding-top: 120px; */
+}
+
+.team-title {
+  margin-top: 0;
+  margin-bottom: 72px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .team .team-cards {
@@ -241,18 +275,6 @@ body {
 }
 .team-member:last-child {
   margin-right: 0;
-}
-
-.team-title {
-  margin-top: 0;
-  margin-bottom: 72px;
-
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
 }
 
 .card-title {
@@ -276,13 +298,73 @@ body {
   line-height: 1.5;
 }
 
-/* portfolio */
 
-.portfolio-menu {
-  margin-top: 96px;
-  margin-bottom: 72px;
+/* button */
+.button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 170px;
+  color: #ffffff;
+  background-color: var(--pimary-bg-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: center;
 }
 
+.button.primary {
+  font-family: Roboto, sans-serif;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  border: 1px solid transparent;
+}
+
+.button.secondary {
+  font-family: Roboto, sans-serif;
+  color: var(--accent-color);
+  background-color: var(--secondary-button-color);
+  border: 1px solid #e7e9fc;
+}
+
+.footer {
+  /* width: 1440px; */
+  height: 310px;
+  margin: 0 auto;
+  padding: 100px 156px;
+  color: #e7e9fc;
+  background-color: var(--hero-background-color);
+}
+
+.footer-logo {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--secondary-button-color);
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  text-decoration: none;
+}
+
+.footer-text {
+  /* position: absolute; */
+  width: 264px;
+  /* height: 110px; */
+  /* padding-left: 156px;
+  padding-top: 100px; */
+}
+
+
+
+/* portfolio */
+.portfolio-menu {
+  width: 1440px;
+  margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
 .portfolio-menu .list {
   display: flex;
   justify-content: center;
@@ -293,14 +375,14 @@ body {
 
 
 /* portfolio cards */
-
 .portfolio-cards {
-  width: 1128px;
+  width: 1440px;
+  margin: 0 auto;
   padding-left: 156px;
   padding-right: 156px;
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
-  margin-bottom: 120px;
+  margin-bottom: 120px; */
 }
 
 .portf-projects.list {
@@ -308,7 +390,6 @@ body {
   flex-wrap: wrap;
   background-color: var(--cards-bg-color);
 }
-
 .portf-projects .project-card {
   width: 360px;
   /*abo u % vid rozmiru bat'ka: width: 25%;
@@ -346,60 +427,4 @@ body {
 
 .portf-card-item {
   text-decoration: none;
-}
-
-/* button */
-
-.button {
-  display: inline-block;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding: 16px 32px;
-  min-width: 170px;
-  color: #ffffff;
-  background-color: var(--pimary-bg-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-  text-decoration: none;
-  text-align: center;
-}
-
-.button.primary {
-  font-family: Roboto, sans-serif;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  border: 1px solid transparent;
-}
-
-.button.secondary {
-  font-family: Roboto, sans-serif;
-  color: var(--accent-color);
-  background-color: var(--secondary-button-color);
-  border: 1px solid #e7e9fc;
-}
-
-footer {
-  width: 1440px;
-  height: 310px;
-  color: #e7e9fc;
-  background-color: var(--hero-background-color);
-}
-
-.footer-logo {
-  margin-top: 0;
-  margin-bottom: 16px;
-  color: var(--secondary-button-color);
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  line-height: 1.33;
-  text-decoration: none;
-}
-
-.footer-text {
-  /* position: absolute; */
-  width: 264px;
-  /* height: 110px; */
-  padding-left: 156px;
-  padding-top: 100px;
 }
