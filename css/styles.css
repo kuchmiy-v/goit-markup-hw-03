@@ -17,6 +17,21 @@
   --cards-bg-color: #f4f4fd;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
 body {
   /* width: 1440px; */
   /* background-color: #e5e5e5; */
@@ -26,22 +41,36 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Для секцій використовується один клас .section, 
+в якому задані відповідні падінги, що відсувають контент всередину секції.
+В секції падінги верх і вниз (і задавати їх лише секції),
+а В середині секції має бути контейнер.
+Footer сам є секцією, в ньому не має бути секції; падінги вверх і вниз, а всередині нього контейнер */
+.section {
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  /* background-color: var(--cards-bg-color); */
+}
 
+/* <div class="container"> 
+Ширина «контейнера» відповідає макету і дорівнює 1158px.
+«Контейнер» обгортає контент хедера, футера і секцій. Тобто знаходиться всередині них.*/
 .container {
-  width: 1158;
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-
-.s-header {
-  
-}
- .header {
-  width: 1440px;
+  width: 1158px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 2px solid var(--secondary-button-color);
 }
+/* .header .container {
+    width: 1158px;
+    margin: 0 auto;
+} */
 
 /* header navigation */
 .header-nav {
@@ -94,8 +123,8 @@ body {
 
 .header-list .header-link {
   display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
 }
 
 .header-link {
@@ -125,17 +154,18 @@ body {
 }
 
 /* hero */
+.s-hero {
+  background-color: var(--hero-background-color);
+}
 .hero {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* width: 1440px; */
   height: 600px;
   /* прибираємо маржени, оформлення робимо падінгами */
   /* padding: 188px 473px; */
   padding-top: 188px;
   padding-bottom: 188px;
-  background-color: var(--hero-background-color);
   text-align: center;
-  /* margin-bottom: 120px; */
 }
 
 /* не виходить розмістити текст (основний напис Effective Solutions for Your Business) як на макеті, просто підігнав падінгами */
@@ -158,25 +188,16 @@ body {
   padding-bottom: 120px;
 }
 .features {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 15px;
-
-  /* padding-left: 156px;
-  padding-right: 156px; */
-  /* padding: 120px 156px; */
+  /* width: 1158px;
+  margin: 0 auto; */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* section */
-.section {
-  /* margin-top: 0;
-  margin-bottom: 120px; */
-  /* padding-bottom: 120px; */
-  /* background-color: var(--cards-bg-color); */
-}
 
-.features .section {
+.features .list {
   display: flex;
+  gap: 24px;
   /* width: 1128px; */
   /* margin-left: 156px;
   margin-right: 156px; */
@@ -186,12 +207,12 @@ body {
   padding-top: 120px; */
 }
 
-.section .section-item: {
+/* .section .section-item: {
   margin-right: 24px;
 }
 .section .section-item:last-child {
   margin-right: 0;
-}
+} */
 
 .section-title {
   margin-top: 0;
@@ -203,7 +224,7 @@ body {
 }
 
 .section-after-title {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* margin-top: 0;
   margin-bottom: 0; */
   /* не виходить виставити маржени між картками section-after-title через флекси: 
@@ -219,7 +240,7 @@ body {
 .section .section-item:last-child {
   margin-right: 0;
 }  */
-  margin-right: 24px;
+  /* margin-right: 24px; */
   width: 264px;
   color: var(--primary-text-color);
   font-size: 16px;
@@ -228,19 +249,20 @@ body {
 
 /* works "We are doing" */
 .s-works {
-  padding-top: 120px;
+  /* padding-top: 120px; */
   padding-bottom: 120px;
 }
 .works {
-  width: 1440px;
+  /* width: 1158px;
   margin: 0 auto;
   padding-left: 156px;
-  padding-right: 156px;
+  padding-right: 156px; */
   /* margin-bottom: 120px; */
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
 }
 .works .list {
   display: flex;
+  gap: 24px;
 }
 
 .works-title {
@@ -254,29 +276,28 @@ body {
   text-transform: capitalize;
 }
 
-.works-item {
+/* .works-item {
   margin-right: 24px;
 }
 .works-item:last-child {
   margin-right: 0;
-}
+} */
 
 /* Our team */
 .team-section {
   /* width: 1440px; */
   /* margin: 0 auto; */
-  padding-top: 120px;
   padding-bottom: 110px;
 }
 /* .team-section .team { */
 .team {
-  margin: 0 auto;
-  width: 1440px;
+  /* margin: 0 auto;
+  width: 1440px; */
   /* height: 732px; */
   /* background-color: var(--cards-bg-color); */
   /* padding: 120px 156px; */
-  padding-left: 156px;
-  padding-right: 156px;
+  padding-left: 15px;
+  padding-right: 15px;
   /* padding-top: 120px; */
 }
 
@@ -293,17 +314,18 @@ body {
 
 .team .team-cards {
   display: flex;
+  gap: 24px;
 }
 
 .team-member {
   width: 264px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
   border: 1px solid var(--cards-bg-color);
   border-radius: 0px 0px 4px 4px;
 }
-.team-member:last-child {
+/* .team-member:last-child {
   margin-right: 0;
-}
+} */
 
 .card-title {
   color: var(--title-text-color);
@@ -325,7 +347,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
-
 
 /* button */
 .button {
@@ -360,7 +381,7 @@ body {
 .footer {
   /* width: 1440px; */
   height: 310px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* padding: 100px 156px; */
   padding-top: 100px;
   padding-bottom: 100px;
@@ -381,28 +402,26 @@ body {
 .footer-text {
   /* position: absolute; */
   width: 264px;
-  margin-left: 156px;
+  /* margin-left: 156px; */
   /* height: 110px; */
   /* padding-left: 156px;
   padding-top: 100px; */
 }
 
-
-
 /* portfolio */
-.portf-menu-section {
-
+.portf-section {
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 .portf-btn-list {
   margin: 0;
   list-style: none;
 }
 .portfolio-menu {
-  width: 1440px;
-  margin: 0 auto;
+  /* width: 1158px; */
+  /* margin: 0 auto; */
   margin-top: 0;
   margin-bottom: 72px;
-  padding-top: 96px;
   /* padding-bottom: 72px; */
 }
 .portfolio-menu .portf-btn-list {
@@ -415,7 +434,6 @@ body {
 .portf-btn-list .filter-btn:last-child {
   margin-right: 0;
 }
-
 
 /* portfolio cards */
 .portfolio-cards {
@@ -432,10 +450,15 @@ body {
 .portf-projects.list {
   display: flex;
   flex-wrap: wrap;
+
   /* background-color: var(--cards-bg-color); */
+  /* margin-left: -24px;
+  margin-top: -24px; */
 }
 .portf-projects .project-card {
   width: 360px;
+  /* flex-basis: calc(100% / 3 - (відступ між елементами списку)); - краще задавати у %: браузер сам вирахує шир.
+  задаємо правий та нижній (або лівий та верхній) маржени елементам списку і від'ємний маржин контейнуру такої ж ширини*/
   /*abo u % vid rozmiru bat'ka: width: 25%;
   abo width: calc(100% / 2); - todi brawser sam rahue pixeli, zamst' nas ;
   prybraty margins u krayn'ogo elementu - calc((100% - summa marginiv u ryadku -1) / kilkist' elementiv u ryadku)
@@ -464,15 +487,10 @@ body {
 */
 
 .portf-card-descript {
-padding: 32px 16px;
-border: 1px solid var(--cards-bg-color);
+  padding: 32px 16px;
+  border: 1px solid var(--cards-bg-color);
 }
 
-.portf-card-text {
-  color: var(--cards-bg-color);
-  font-size: 16px;
-  line-height: 1.5;
-}
 
 .portf-card-item {
   text-decoration: none;
