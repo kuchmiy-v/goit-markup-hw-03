@@ -62,9 +62,11 @@ Footer сам є секцією, в ньому не має бути секції
   padding-right: 24px;
 }
 
-.header {
+header {
   padding-top: 24px;
   padding-bottom: 24px;
+}
+.header {
   border-bottom: 2px solid var(--secondary-button-color);
 }
 /* .header .container {
@@ -76,8 +78,8 @@ Footer сам є секцією, в ньому не має бути секції
 .header-nav {
   display: flex;
   align-items: center;
-  padding-left: 156px;
-  padding-right: 156px;
+  /* padding-left: 156px;
+  padding-right: 156px; */
 }
 
 /* logo */
@@ -155,16 +157,16 @@ Footer сам є секцією, в ньому не має бути секції
 
 /* hero */
 .s-hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
   background-color: var(--hero-background-color);
 }
 .hero {
   /* margin: 0 auto; */
   /* width: 1440px; */
-  height: 600px;
+  /* height: 600px; */
   /* прибираємо маржени, оформлення робимо падінгами */
   /* padding: 188px 473px; */
-  padding-top: 188px;
-  padding-bottom: 188px;
   text-align: center;
 }
 
@@ -193,7 +195,6 @@ Footer сам є секцією, в ньому не має бути секції
   padding-left: 15px;
   padding-right: 15px;
 }
-
 
 .features .list {
   display: flex;
@@ -327,6 +328,11 @@ Footer сам є секцією, в ньому не має бути секції
   margin-right: 0;
 } */
 
+.member-description {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .card-title {
   color: var(--title-text-color);
   font-weight: 500;
@@ -380,7 +386,7 @@ Footer сам є секцією, в ньому не має бути секції
 
 .footer {
   /* width: 1440px; */
-  height: 310px;
+  /* height: 310px; */
   /* margin: 0 auto; */
   /* padding: 100px 156px; */
   padding-top: 100px;
@@ -390,8 +396,10 @@ Footer сам є секцією, в ньому не має бути секції
 }
 
 .footer-logo {
-  margin-top: 0;
+  /* display: inline-block; */
+  /* margin-top: 0; */
   margin-bottom: 16px;
+  /* чомусь маржин вниз не відображається (не працює) -> тре display: inline-block і все працює */
   color: var(--secondary-button-color);
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -402,6 +410,7 @@ Footer сам є секцією, в ньому не має бути секції
 .footer-text {
   /* position: absolute; */
   width: 264px;
+  margin-top: 16px;
   /* margin-left: 156px; */
   /* height: 110px; */
   /* padding-left: 156px;
@@ -436,7 +445,7 @@ Footer сам є секцією, в ньому не має бути секції
 }
 
 /* portfolio cards */
-.portfolio-cards {
+/* .portfolio-cards {
   width: 1440px;
   margin: 0 auto;
   padding-left: 156px;
@@ -445,18 +454,23 @@ Footer сам є секцією, в ньому не має бути секції
   /* margin-left: auto;
   margin-right: auto;
   margin-bottom: 120px; */
+
+.portf-section .container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .portf-projects.list {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
 
   /* background-color: var(--cards-bg-color); */
   /* margin-left: -24px;
   margin-top: -24px; */
 }
 .portf-projects .project-card {
-  width: 360px;
+  width: calc((100% - 48)/ 3);
   /* flex-basis: calc(100% / 3 - (відступ між елементами списку)); - краще задавати у %: браузер сам вирахує шир.
   задаємо правий та нижній (або лівий та верхній) маржени елементам списку і від'ємний маржин контейнуру такої ж ширини*/
   /*abo u % vid rozmiru bat'ka: width: 25%;
@@ -465,8 +479,8 @@ Footer сам є секцією, в ньому не має бути секції
   summa marginiv u ryadku -1 = kil'k. margine u ryadku * znachennya margine
   */
   /* background-color: var(--cards-bg-color); */
-  margin-right: 24px;
-  margin-bottom: 24px;
+  /* margin-right: 24px;
+  margin-bottom: 24px; */
 }
 
 .project-card:nth-child(3n) {
@@ -490,7 +504,6 @@ Footer сам є секцією, в ньому не має бути секції
   padding: 32px 16px;
   border: 1px solid var(--cards-bg-color);
 }
-
 
 .portf-card-item {
   text-decoration: none;
