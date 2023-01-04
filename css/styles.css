@@ -65,10 +65,11 @@ Footer сам є секцією, в ньому не має бути секції
 header {
   padding-top: 24px;
   padding-bottom: 24px;
-}
-.header {
   border-bottom: 2px solid var(--secondary-button-color);
 }
+/* .header {
+  
+} */
 /* .header .container {
     width: 1158px;
     margin: 0 auto;
@@ -288,7 +289,8 @@ header {
 .team-section {
   /* width: 1440px; */
   /* margin: 0 auto; */
-  padding-bottom: 110px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 /* .team-section .team { */
 .team {
@@ -411,6 +413,7 @@ header {
   /* position: absolute; */
   width: 264px;
   margin-top: 16px;
+  line-height: 24px;
   /* margin-left: 156px; */
   /* height: 110px; */
   /* padding-left: 156px;
@@ -463,7 +466,7 @@ header {
 .portf-projects.list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 48px 24px;
 
   /* background-color: var(--cards-bg-color); */
   /* margin-left: -24px;
